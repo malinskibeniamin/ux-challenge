@@ -1,0 +1,120 @@
+{
+  "name": "io.debezium.connector.postgresql.PostgresConnector",
+  "configs": [
+    {
+      "definition": {
+        "name": "topic.prefix",
+        "type": "STRING",
+        "default_value": "",
+        "importance": "HIGH",
+        "documentation": "Topic prefix that identifies and provides a namespace for the particular database server/cluster is capturing changes. The topic prefix should be unique across all other connectors, since it is used as a prefix for all Kafka topic names that receive events emitted by this connector. Only alphanumeric characters, hyphens, dots and underscores must be accepted",
+        "group": "Postgres",
+        "order": 1,
+        "width": "MEDIUM",
+        "required": false,
+        "display_name": "Topic prefix",
+        "dependents": []
+      },
+      "value": {
+        "name": "topic.prefix",
+        "value": null,
+        "recommended_values": [],
+        "errors": ["The 'topic.prefix' value is invalid: A value is required"],
+        "visible": true
+      },
+      "metadata": {}
+    },
+    {
+      "definition": {
+        "name": "database.hostname",
+        "type": "STRING",
+        "default_value": "",
+        "importance": "HIGH",
+        "documentation": "Resolvable hostname or IP address of the database server",
+        "group": "Postgres",
+        "order": 2,
+        "width": "MEDIUM",
+        "required": false,
+        "display_name": "Hostname",
+        "dependents": []
+      },
+      "value": {
+        "name": "database.hostname",
+        "value": null,
+        "recommended_values": [],
+        "errors": ["The 'database.hostname' value is invalid: A value is required"],
+        "visible": true
+      },
+      "metadata": {}
+    },
+    {
+      "definition": {
+        "name": "database.port",
+        "type": "INT",
+        "default_value": "5432",
+        "importance": "HIGH",
+        "documentation": "Port of the database server",
+        "group": "Postgres",
+        "order": 3,
+        "width": "SHORT",
+        "required": false,
+        "display_name": "Port",
+        "dependents": []
+      },
+      "value": {
+        "name": "database.port",
+        "value": null,
+        "recommended_values": [],
+        "errors": [],
+        "visible": true
+      },
+      "metadata": {}
+    },
+    {
+      "definition": {
+        "name": "database.user",
+        "type": "STRING",
+        "default_value": "",
+        "importance": "HIGH",
+        "documentation": "Name of the database user to be used when connecting to the database",
+        "group": "Postgres",
+        "order": 4,
+        "width": "SHORT",
+        "required": false,
+        "display_name": "User",
+        "dependents": []
+      },
+      "value": {
+        "name": "database.user",
+        "value": null,
+        "recommended_values": [],
+        "errors": ["The 'database.user' value is invalid: A value is required"],
+        "visible": true
+      },
+      "metadata": {}
+    },
+    {
+      "definition": {
+        "name": "database.password",
+        "type": "PASSWORD",
+        "default_value": "",
+        "importance": "HIGH",
+        "documentation": "Password of the database user to be used when connecting to the database",
+        "group": "Postgres",
+        "order": 5,
+        "width": "SHORT",
+        "required": false,
+        "display_name": "Password",
+        "dependents": []
+      },
+      "value": {
+        "name": "database.password",
+        "value": null,
+        "recommended_values": [],
+        "errors": [],
+        "visible": true
+      },
+      "metadata": {}
+    }
+  ]
+}
